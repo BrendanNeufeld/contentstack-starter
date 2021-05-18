@@ -1,7 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
+console.log('1')
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
+console.log('2')
+console.log(`CONTENTSTACK_API_KEY: ${process.env.CONTENTSTACK_API_KEY}`)
+console.log(
+  `CONTENTSTACK_DELIVERY_TOKEN: ${process.env.CONTENTSTACK_DELIVERY_TOKEN}`
+)
+console.log(`CONTENTSTACK_ENVIRONMENT: ${process.env.CONTENTSTACK_ENVIRONMENT}`)
+console.log(`CONTENTSTACK_CDN: ${process.env.CONTENTSTACK_CDN}`)
 
 module.exports = {
   siteMetadata: {
@@ -58,4 +66,4 @@ module.exports = {
       },
     },
   ],
-};
+}
